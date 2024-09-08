@@ -53,8 +53,8 @@
                         <div class="card-body" style="display: flex;justify-content: space-between;flex-direction: column;">
                             <p class="card-text" id="Description{{i.id}}">{{i.description_text}}</p>
 
+                            <p class="card-text">Status: <span id="Status{{i.id}}">{{i.status_text}}</span></p>
                             <div style="font-size: 12px;display: flex;flex-direction: row;justify-content: space-between;">
-                                <p class="card-text">Status: <span id="Status{{i.id}}">{{i.status_text}}</span></p>
                                 <p class="card-text">Criado: {{i.userMaker.name_text}}</p>
                                 {%if i.userAssign%}
                                     <p class="card-text">Atribuido: <span id='Email{{i.id}}'>{{i.userAssign.email_text}}</span> </p>
@@ -99,7 +99,7 @@
                                 <input type="text" class="form-control"  name="Email"  maxlength="100" placeholder="Preencher apenas se houver que atribuir a outro usuario" id="UpdateEmail">
                             </div>
                             <div class="mb-3">
-                                <select id="Select" name="Status" class="form-select">
+                                <select id="Select" required name="Status" class="form-select">
                                     <option value="" hidden selected>Selecionar uma opção</option>
                                     <option>Pendente</option>
                                     <option>Em andamento</option>
